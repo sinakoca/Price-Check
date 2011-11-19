@@ -33,10 +33,35 @@ PRODUCTS = [
     }
 ]
 
+RETAILERS = [
+    {
+        'name' : 'Maxima',
+        'city' : 'Tartu'
+    },
+    {
+        'name' : 'Comarket',
+        'city' : 'Tartu'
+    },
+    {
+        'name' : 'Consum',
+        'city' : 'Tartu'
+    },
+    {
+        'name' : 'Maxima',
+        'city' : 'Tallin'
+    }
+]
+
 if __name__ == '__main__':
     connection = pymongo.Connection('localhost', 27017)
     db = connection.db
+    # save products
     products = db.products
     products.drop()
     for p in PRODUCTS:
         products.insert(p)
+    # save retailers
+    retailers = db.retailers
+    retailers.drop()
+    for r in RETAILERS:
+        retailers.insert(r)
