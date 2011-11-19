@@ -47,25 +47,25 @@
                                 <input id="q" name="q" class="searchfield" type="text" value="{{ query }}" />
                                 <input id="searchsubmit" type="image" src="images/search-go.jpg" class="searchgo"  value="" />
                             </div>
+                            <p>
+                                Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
+                                <select id="change_city" onchange="method(this.value)" class="show" name=city>
+                                    <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
+                                    <option value="Tallinn" id="Tallinn">Tallinn</option>
+                                    <option value="Tartu" id="Tartu">Tartu</option>
+                                    <option value="Parnu" id="Parnu">Pärnu</option>
+                                    <option value="Volga" id="Volga">Valga</option>
+                                    <option value="Viljandi" id="Viljandi">Viljandi</option>
+                                    <option value="Kuressaare" id="Kuressaare">Kuressaare</option>
+                                    <option value="Võru" id="Võru">Võru</option>
+                                    <option value="Rapla" id="Rapla">Rapla</option>
+                                    <option value="Põlva" id="Põlva">Põlva</option>
+                                    <option value="Rakvere" id="Rakvere">Rakvere</option>
+                                    <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
+                                </select>
+                            </p>
                         </form>
                     </div>
-                    <p>
-                        Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
-                            <select id="change_city" onchange="method(this.value)" class="show">
-                                <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
-                                <option value="Tallinn" id="Tallinn">Tallinn</option>
-                                <option value="Tartu" id="Tartu">Tartu</option>
-                                <option value="Parnu" id="Parnu">Pärnu</option>
-                                <option value="Volga" id="Volga">Valga</option>
-                                <option value="Viljandi" id="Viljandi">Viljandi</option>
-                                <option value="Kuressaare" id="Kuressaare">Kuressaare</option>
-                                <option value="Võru" id="Võru">Võru</option>
-                                <option value="Rapla" id="Rapla">Rapla</option>
-                                <option value="Põlva" id="Põlva">Põlva</option>
-                                <option value="Rakvere" id="Rakvere">Rakvere</option>
-                                <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
-                            </select>
-                    </p>
 
                     {% block left %}
                     {% endblock left %}

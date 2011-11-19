@@ -28,7 +28,8 @@ def search(request):
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
     _check_session_city(request)
-    city = _get_city(request.session)
+    city = request.GET.get('city') or _get_city(request.session)
+    request.session['city'] = city
     product_list = []
     relevant_productcs = products.find({'keywords' : query})
     for p in relevant_productcs:
