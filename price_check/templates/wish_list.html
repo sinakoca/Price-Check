@@ -4,13 +4,16 @@
         {% for p, q in wish_list.products %}
         <li>
             <p>
-                <span class="title">{{ p.name }} ({{ q }})</span>
+                
                 {# <span class="last">Remove</span> #}
                 <span class="lastdate"></span>
                 <form action='/update' method=GET>
+                     <input type='text' name='quantity' size="2" maxlength="2" value='{{ q }}'  />
                     <input type='hidden' name='product_id' value='{{ p.id }}'>
-                    <input type='text' name='quantity' value='{{ q }}' />
-                    <input type='submit' value='Update' />
+                    X {{ p.name }} ({{ q }})
+<!--                    <span class="title">{{ p.name }} ({{ q }})</span>-->
+                   
+                    <input type='submit' value='Update' style="float: right" />
                 </form>
             </p>
         </li>

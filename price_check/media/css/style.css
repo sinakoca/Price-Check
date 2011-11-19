@@ -64,7 +64,7 @@ a:visited, activer { color:#4c561f; text-decoration:none;}
 #footercontainer a {color:#000;}
 h1#sitename {display:block; font:bold 30px Georgia, "Times New Roman", Times, serif; color:#fff; padding:8px 5px 0 10px; float:left;}
 
-#nav {list-style:none; display:block; float:right; width:550px;}
+#nav {list-style:none; display:block; float:left; width:550px;}
 #nav li {display:inline; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-shadow:#000 1px 1px 1px;}
 #nav li a {display:block; height:35px; padding:12px 17px 0 15px; float:left; color:#D3C8C1;}
 #nav li a:visited, #nav li a:active { color:#D3C8C1;}
