@@ -16,7 +16,12 @@
                     auto: true, 
                     continuous: true
 
-                });			
+                });
+                $('#change_city').hide();
+                $('#location a').click(function() {
+                    $('#change_city').show();
+                    $('#location').hide();
+                });
             });	
         </script>
 
@@ -44,7 +49,23 @@
                             </div>
                         </form>
                     </div>
-                    <p>Your location: <b>{{ city }}</b> (<u>change</u>)</p>
+                    <p>
+                        Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
+                            <select id="change_city" onchange="method(this.value)" class="show">
+                                <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
+                                <option value="Tallinn" id="Tallinn">Tallinn</option>
+                                <option value="Tartu" id="Tartu">Tartu</option>
+                                <option value="Parnu" id="Parnu">Pärnu</option>
+                                <option value="Volga" id="Volga">Valga</option>
+                                <option value="Viljandi" id="Viljandi">Viljandi</option>
+                                <option value="Kuressaare" id="Kuressaare">Kuressaare</option>
+                                <option value="Võru" id="Võru">Võru</option>
+                                <option value="Rapla" id="Rapla">Rapla</option>
+                                <option value="Põlva" id="Põlva">Põlva</option>
+                                <option value="Rakvere" id="Rakvere">Rakvere</option>
+                                <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
+                            </select>
+                    </p>
 
                     {% block left %}
                     {% endblock left %}
