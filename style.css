@@ -1,0 +1,170 @@
+@import url("contactform.css");
+* {padding:0; margin:0;}
+body {background: url(images/htmlbg.jpg) repeat; font:11px Verdana, Geneva, sans-serif; color:#333;}
+.clear {clear:both;}
+ul {list-style:none;}
+#wrap {width:947px; margin:auto; background:#fff; border-left: solid 8px #f5f5f5; border-right: solid 8px #f5f5f5;}
+#topribbon {background: url(images/ribbonbg.jpg) repeat-x; height:52px;}
+#homeheader {background: url(images/headerbg-home.jpg) repeat; height:334px; padding:8px; margin-bottom:5px;}
+#leftheader {background: url(images/greenbox.jpg) no-repeat; height:334px; width:637px; float:left;}
+#rightheader {background:url(images/coffeebox-ads.jpg) no-repeat; height:326px; padding-top:8px; float:right; width:284px;}
+#featured-dl {background:url(images/slidepng.png) no-repeat; width:597px; height:233px; overflow:hidden;}
+#slidewrapper {padding:20px 20px 0 20px;}
+#homeheader h2 {display:block; font:bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-shadow:#2a3107 1px 1px 1px; color:#ece4d8; margin-bottom:10px; padding-top:10px;}
+#content { background:url(images/sidebarbg.jpg) right top repeat-y;}
+#left {float:left; width:645px;}
+#sidebar {float:right; width:300px;}
+#search {background:url(images/searchbar.jpg) left top no-repeat; height:50px;}
+.hide {display:none!important;}
+#content {position:relative;}
+#sidebarhead {background:url(images/sidebarhead.jpg) right top no-repeat; height:50px; margin-bottom:10px;}
+#leftsidebar {width:226px; background:url(images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}
+#leftsidebar h2 {display:block; background:url(images/leftsidebarh2.jpg) right top no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; padding:7px 0 0 15px; margin-bottom:10px;}
+.sidebar-container {padding:0 10px 10px 15px;}
+#sidebar h2 {display:block; background: url(images/sidebarh2.jpg) -1px 0 no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
+#midcolumn {width:405px; float:right; padding:10px 5px 10px 2px;}
+#midcolumn .subhead {display:block; background: #E7EFCA; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
+#leftsidebar h2, #sidebar h2, .subhead {text-shadow:#fff 1px 1px 1px; color:#736962!important; font-weight:bold;}
+#footer {background:url(images/footer.jpg) no-repeat; height:195px;}
+.tplinfo {display:block; margin:0;}
+#templatelist {display:block; padding-right:3px;}
+#templatelist li {display:block; background:url(images/templateholder2.gif) no-repeat; width:171px; height:149px; padding:8px 16px 8px 16px; margin:0 auto 8px auto;}
+#templatelist li img {display:block; margin-bottom:5px;}
+.post a.morebtn, .tplinfo a.morebtn, a.morebtn {background:url(images/linkbg-left.png) no-repeat; height:18px; padding-left:10px; display:block; float:left; color:#fff; text-decoration:none; line-height:14px!important; text-decoration:none!important;}
+a.morebtn:visited, a.morebtn:active { color:#eee; text-decoration:none; text-decoration:none!important;}
+a.morebtn span {background:url(images/linkbgright.png) right top no-repeat; padding:1px 10px 0 0; height:17px; display:block;}
+#templatelist a.morebtn {margin-right:5px;}
+a.morebtn:hover { color:#fff; background-color:transparent!important;}
+#templatelist h3 {display:block; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:5px; color:#4c561f;}
+#templatelist li:hover {background:url(images/template-holder1.gif) no-repeat;}
+.post {margin-bottom:15px;}
+.post p {line-height:18px; margin-bottom:18px;}
+.post h3 {display:block; font: normal 18px Georgia, "Times New Roman", Times, serif; color:#171612;}
+.postbottom {padding-bottom:10px; border-bottom: dashed 1px #908B78;}
+img, a img {border:none;}
+#sidebar ul {display:block; margin-bottom:10px;}
+#forum_list li {display:block; text-shadow:#fff 1px 1px 1px; background:url(images/sidebar-listdevider.jpg) left bottom repeat-x; padding:3px 3px 8px 3px; margin-bottom:8px;}
+#forum_list li p {display:block;  padding:5px 5px 5px 35px; background: url(images/icon-comment-sb.jpg)2px 5px no-repeat;}
+#forum_list li a {text-decoration:none; font-weight:normal;}
+#forum_list li span {display:block; padding-bottom:3px;}
+#forum_list li .title a { color:#333;}
+#forum_list li .title {width:65%; float:left; margin-bottom:3px;}
+#forum_list li .last {text-align:left; float:right; width:32%; padding-bottom:3px; font:9px Verdana, Geneva, sans-serif!important; color:#515827;}
+#forum_list li .lastdate {text-align:left; padding-bottom:3px; font:9px Verdana, Geneva, sans-serif!important; color: #515827; clear:both;}
+#forum_list li a:hover {color:#000;}
+
+#footercontainer { padding:70px 45px 0 300px; font:11px Verdana, Geneva, sans-serif; color: #252523;}
+#footercontainer p {display:block; padding:3px;}
+
+a { color:#4c561f; text-decoration:none;}
+a:visited, activer { color:#4c561f; text-decoration:none;}
+#footercontainer a {color:#000;}
+h1#sitename {display:block; font:bold 30px Georgia, "Times New Roman", Times, serif; color:#fff; padding:8px 5px 0 10px; float:left;}
+
+#nav {list-style:none; display:block; float:right; width:550px;}
+#nav li {display:inline; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-shadow:#000 1px 1px 1px;}
+#nav li a {display:block; height:35px; padding:12px 17px 0 15px; float:left; color:#D3C8C1;}
+#nav li a:visited, #nav li a:active { color:#D3C8C1;}
+#nav li a:hover, #nav li.active a {color:#fff; background:url(images/active-menu.jpg) center bottom no-repeat;}
+#sidebar form label {display:block; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:8px;}
+#sidebar form {width:263px; margin:auto;}
+#sidebar form div.fieldcontainer { background:url(images/txtfield-sidebar.jpg) no-repeat; height:42px; width:262px; margin-bottom:8px;}
+#sidebar form .txtfield {display:block; background:transparent; border:none; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:10px 8px 0 8px; height:42px; width:246px;}
+#search form {display:block; padding:6px 25px 0 138px;}
+#search form div {background:url(images/search-field.gif) no-repeat; width:464px; height:27px; padding:5px 0 5px 0;}
+#search .searchfield {display:block; width:370px; height:24px; background:transparent; border:none; float:left; padding:5px 10px 5px 10px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; color: #E8E6CC;}
+#search .searchgo { display:block; float:left; padding:0 0 0 8px;}
+.brnad { width:252px; margin:0 auto 8px auto; background:#000; padding:5px;}
+#sidebar .categories li {display:block; padding:5px; background: url(images/sidebar-listdevider.jpg) left bottom repeat-x; height:30px;}
+#sidebar .categories li a {color:#000!important; background:url(images/icon-comment-sb.jpg) 3px 5px no-repeat; display:block;  height:20px; padding:8px 5px 0 35px;;}
+#sidebar .categories li a:hover {text-decoration:underline;}
+.css_templates{ padding:10px 0 10px 10px;}
+.css_templates .post {width:174px; height:240px; overflow:hidden; margin:0 10px 8px 0; border:solid 5px #e9e5dd; background:#f7f3eb; padding:8px; float:left;}
+.css_templates .post .thumb {display:block; text-align:center; width:174px;}
+.css_templates .post .thumb img {margin-bottom:8px;}
+.css_templates h3 {margin-bottom:10px; color:#171612; font:bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+.css_templates .post p {margin-bottom:5px!important;}
+.css_templates .post a.morebtn {margin-right:5px;}
+.css_templates .post p.templateinfo span {display:block; background:url(images/bullet-check.png) 1px 5px no-repeat; padding-left:25px;}
+.css_templates .post .tplinfo { padding:10px 0 0 0;}
+
+
+.wp-pagenavi {display:block; height:30px; margin-bottom:18px; text-shadow: #000 1px 1px 1px;}
+.wp-pagenavi span, .wp-pagenavi a {display:block; height:18px; padding:3px 10px 0 10px; text-align:center; float:left; background:#222; margin-left:1px; color:#ccc!important;}
+
+.wp-pagenavi a:visited, .wp-pgenavi a:active {display:block; height:18px; padding:3px 10px 0 10px; text-align:center; float:left; background:#171612; margin-left:2px; color:#ccc!important;}
+.wp-pagenavi .current, .wp-pagenavi a:hover {background:#000; color:#fff;}
+
+.blog {padding:10px;}
+.blog .post {margin-bottom:15px;}
+.blog .post p {line-height:18px; margin-bottom:18px;}
+.blog .post h3 {display:block; font: normal 18px Georgia, "Times New Roman", Times, serif; color:#171612;}
+.blog .postbottom {padding-bottom:10px; border-bottom: dashed 1px #908B78;}
+.blog .post .tplinfo {display:none;}
+.blog .post .templateinfo {display:none;}
+.blog .post .thumb {display:none;}
+.blog .post h3 { font: normal 20px Georgia, "Times New Roman", Times, serif;}
+
+.css_templates .post .bogpost {display:none!important;}
+#main {padding:10px;}
+#main h2 {display:block; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; border-bottom:10px;}
+#main table {width:100%; margin-bottom:10px;}
+#main table td {padding:3px;}
+#main table th {padding:3px; background:#444138; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; color:#ccc; text-shadow: #000 1px 1px 1px;}
+a.new-topic { font:bold 11px "Trebuchet MS", Arial, Helvetica, sans-serif!important; color:#fff!important;}
+a.new-topic:active, a.new-topic:visited {color:#fff;}
+#main #latest a {color:#000;}
+#main #latest tr {background:#ffffcc;}
+#main #latest td { border-bottom: dashed 1px #222;}
+#main #forumlist td {border-bottom: solid 1px #ccc;}
+#main #forumlist tr {background:#F3F7EA;}
+.alignright {float:right;}
+.alignleft {float:left;}
+img.alignright {margin-left:10px;}
+img.alignleft {margin-right:10px;}
+
+.post h4 {display:block; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:10px;}
+.post ul, .post ol {margin-bottom:10px; line-height:18px;}
+.post ul {list-style:square; padding-left:25px;}
+.post ol { padding-left:25px;}
+.post code {margin:8px; padding:10px; background:#efefef; font:14px "Courier New", Courier, monospace; color:#000; margin-bottom:10px; display:block; white-space:pre; border-left: solid 10px #dedede;}
+.post .tags { background:#efefef; padding:10px; font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:10px;}
+.authorinfo {padding:10px; border-top: solid 1px #ccc; border-bottom: solid 1px #ccc;}
+.authorinfo img {float:left; margin-right:10px;}
+.post a { text-decoration:underline!important;}
+.post h1 a, .post h2 a, .post h3 a, .post h4 a {text-decoration:none!important; color:#171612!important;}
+.tags a {text-decoration:none!important; color:#333;}
+.tags p {margin-bottom:0!important;}
+#comments {background:#F1E8DD;}
+#comments h2 {display:block; padding:10px; background: #B2ABA3; color:#fff; text-shadow:#333 1px 1px 1px;}
+#comments .entry {padding:10px; border-bottom:solid 5px #CBC4BB;}
+.entry .avt {display:block; float:left; margin:0!important; padding:5px; background:#C9C2B9; border: solid 1px #817D77;}
+.entry .con {margin-left:75px;}
+.entry .name, .entry .date {margin-left:75px;}
+.entry .name {display:block; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333; margin-bottom:5px;}
+.entry .name a {color:#000; font-style:italic;}
+.entry .date {display:block; font:bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:10px; }
+.entry .date a {color:#555;}
+.entry .con p {line-height:16px; color:#000; margin-bottom:15px;}
+.entry.alt {background:#E5EDF0; border-bottom:solid 5px #BDC2C7!important;}
+.entry.alt .avt { background: #C4CACF; border: solid 1px #8B8F93;}
+.entry a:hover {text-decoration:underline;}
+.entry blockquote {padding-left:10px; display:block; border-left: solid 3px #000; font: italic 12px Georgia, "Times New Roman", Times, serif; margin-left:10px;}
+.entry blockquote cite {font:12px "Trebuchet MS", Arial, Helvetica, sans-serif!important; color:#000;}
+.comments-form {padding:10px; background:#efefef url(images/commentformbg.png) right bottom no-repeat;}
+.formid, .formemail, .formuri {display:block; height:22px; padding:4px 5px 0 5px; border:solid 1px #999; width:300px; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#000; float:left;}
+.comments-form p {display:block; padding:3px; clear:both; min-height:30px;}
+.comments-form p label {display:block; float:left; padding-left:25px; padding-top:5px; font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+.comments-form p label strong {color:#900;}
+.comments-form textarea { border:solid 1px #999; width:300px; padding:4px 5px 0 5px;}
+.comments-form h3 {display:block; margin-bottom:10px;}
+.blog .post img {margin-bottom:10px;}
+
+.blog #searchform {
+	display:block;
+	padding:15px;
+	margin:15px;
+	background-color: #1E1A17;
+}
+
+.blog #searchform .searchfield {display:block; float:left; background:#000; color:#fff; border:solid 1px #111; padding:4px;}
