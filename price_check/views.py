@@ -12,7 +12,10 @@ products = connection.db.products
 
 def index(request):
     _check_session_wish_list(request.session)
-    return render_to_response('index.html', {})
+    wish_list = _get_wish_list(request.session)
+    _check_session_city(request.session)
+    city = _get_city(request.session)
+    return render_to_response('index.html', {'city' : city, 'wish_list' : wish_list})
     
 def search(request):
     query = request.GET.get('q') or ''
@@ -59,10 +62,8 @@ def wish_list(request):
 def update(request):
     product_id = request.GET.get('product_id')
     quantity_value = request.GET.get('quantity')
-    print quantity_value
     if not quantity_value.isdigit():
         quantity_value = '1'
-    print quantity_value
     quantity = int(quantity_value)
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
@@ -77,3 +78,12 @@ def _check_session_wish_list(session):
 
 def _get_wish_list(session):
     return session['wish_list']
+
+def _check_session_city(session):
+    if 'city' not in session:
+        # TODO: replace
+        session['city'] = 'Tartu'
+def _get_city(session):
+    return session['city']
+
+    
