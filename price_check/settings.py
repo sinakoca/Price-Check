@@ -150,3 +150,13 @@ LOGGING = {
         },
     }
 }
+
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+# Use local settings:
+# MONGO_SERVER = 'localhost'
+# MONGO_PORT = 27017
+

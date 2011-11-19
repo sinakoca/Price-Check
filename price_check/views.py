@@ -8,7 +8,9 @@ from pymongo.objectid import ObjectId
 from stuff.product import Product
 from stuff.wish_list import WishList
 
-connection = pymongo.Connection('localhost', 27017)
+import settings
+
+connection = pymongo.Connection(settings.MONGO_SERVER, settings.MONGO_PORT)
 products = connection.db.products
 retailers = connection.db.retailers
 
