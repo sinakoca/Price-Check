@@ -5,6 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 BASE_DIR = path.dirname(__file__)
+GEO_KEY = '9a492351d85daba42ec4a458aee0491fffa01a9d157efc89e1a6ecc28e238593'
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
