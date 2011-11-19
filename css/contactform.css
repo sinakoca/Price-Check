@@ -1,0 +1,5 @@
+#si_contact_form {padding:10px;}
+.contactform {padding:10px;}
+.contactform label {font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; display:block;}
+.contactform input {padding:5px; margin-bottom:10px;}
+#si_contact_captcha_code {width:120px;}

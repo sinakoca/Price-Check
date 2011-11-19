@@ -1,0 +1,51 @@
+/* Easy Slider */
+
+	#slider{}	
+#featured-dl #slider2 {
+	height: 185px;
+	width: 577px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	color:#fff;
+}
+#featured-dl h3 {display:block; font: bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fff; margin-bottom:10px;}
+#featured-dl p {display:block; margin-bottom:10px;}
+#featured-dl .ftdcontent { width:170px; float:right;}
+#featured-dl .imgblock{ float:left; margin-right:10px;}
+	#slider ul, #slider li, #slider2 ul, #slider2 li{
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+	#slider li, #slider2 li{
+	overflow:hidden;
+		}	
+
+	#slider2 li{
+	height: 185px;
+	width: 570px;
+	display: block;
+	margin: auto;
+		}		
+#controls2 {
+	padding-top: 25px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	display:none;
+}
+#prevBtn2 {
+	display:none;
+	float: left;
+	height: 25px;
+	width: 50px;
+}
+#nextBtn2 {
+	display:none;
+	float: right;
+	height: 25px;
+	width: 50px;
+}
+
