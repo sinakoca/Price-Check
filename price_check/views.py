@@ -28,7 +28,7 @@ def search(request):
     for p in relevant_productcs:
         product = Product(p)
         product_list.append(product)
-    return render_to_response('index.html', {'query' : query, 'products' : product_list, 'wish_list' : _get_wish_list(request.session)})
+    return render_to_response('search.html', {'query' : query, 'products' : product_list, 'wish_list' : _get_wish_list(request.session)})
     
 def add(request):
     product_id = request.GET.get('product_id')
