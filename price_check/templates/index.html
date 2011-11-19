@@ -1,0 +1,14 @@
+<div>
+	<input id="s" name="s" value="{{ query }}" type="text">
+	<input id="searchsubmit" type="image" src="images/searchgobtn.png" alt="search">
+</div>
+<div>Products</div>
+<br/>
+{% for p in products %}
+<div>{{ p.name }} : {{ p.price }} <form action='/add?product_id={{ p.id }}' method=GET><input type='submit' value='Add to WishList' /></form></div>
+{% endfor %}
+
+<div>WishList:</div>
+{% for p in wish_list.products %}
+<div>{{ p.name }} : {{ p.price }} </div>
+{% endfor %}
