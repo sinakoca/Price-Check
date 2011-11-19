@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     url(r'^$', 'price_check.views.index'),
     url(r'^search$', 'price_check.views.search'),
     url(r'^add$', 'price_check.views.add'),
+    url(r'^remove$', 'price_check.views.remove'),
     # Examples:
     # url(r'^$', 'price_check.views.home', name='home'),
     # url(r'^price_check/', include('price_check.foo.urls')),

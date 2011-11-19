@@ -26,15 +26,22 @@ def search(request):
 def add(request):
     product_id = request.GET.get('product_id')
     
-    # get wish list from session
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    print wish_list.created, wish_list.products
     if product_id:
         product_object = products.find_one({'_id' : ObjectId(product_id) })
         if product_object:
             product = Product(product_object)
             wish_list.add_product(product)
+    request.session['wish_list'] = wish_list
+    return render_to_response('index.html', {'wish_list' : wish_list})
+    
+def remove(request):
+    product_id = request.GET.get('product_id')
+
+    _check_session_wish_list(request.session)
+    wish_list = _get_wish_list(request.session)
+    wish_list.remove_product(product_id)
     request.session['wish_list'] = wish_list
     return render_to_response('index.html', {'wish_list' : wish_list})
 
