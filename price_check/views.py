@@ -126,11 +126,11 @@ def _get_wish_list(session):
     return session['wish_list']
 
 def _check_session_city(request):
-    if 'city' not in session:
+    if 'city' not in request.session:
         ip = get_client_ip(request)
         # ip = '62.85.60.2'
         city = get_city(ip) or 'Tartu'
-        session['city'] = city
+        request.session['city'] = city
 
 def _get_city(session):
     return session['city']
