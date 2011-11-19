@@ -6,7 +6,8 @@ ul {list-style:none;}
 #wrap {width:947px; margin:auto; background:#fff; border-left: solid 8px #f5f5f5; border-right: solid 8px #f5f5f5;}
 #topribbon {background: url(images/ribbonbg.jpg) repeat-x; height:52px;}
 #homeheader {background: url(images/headerbg-home.jpg) repeat; height:334px; padding:8px; margin-bottom:5px;}
-#leftheader {background: url(images/greenbox.jpg) no-repeat; height:334px; width:637px; float:left;}
+/*#leftheader {background: url(images/greenbox.jpg) no-repeat; height:334px; width:637px; float:left;}*/
+#leftheader { height:300px; width:637px; float:left;}
 #rightheader {background:url(images/coffeebox-ads.jpg) no-repeat; height:326px; padding-top:8px; float:right; width:284px;}
 #featured-dl {background:url(images/slidepng.png) no-repeat; width:597px; height:233px; overflow:hidden;}
 #slidewrapper {padding:20px 20px 0 20px;}
@@ -18,7 +19,8 @@ ul {list-style:none;}
 .hide {display:none!important;}
 #content {position:relative;}
 #sidebarhead {background:url(images/sidebarhead.jpg) right top no-repeat; height:50px; margin-bottom:10px;}
-#leftsidebar {width:226px; background:url(images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}
+/*#leftsidebar {width:226px; background:url(images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}*/
+#leftsidebar {width:215px; background:url(images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}
 #leftsidebar h2 {display:block; background:url(images/leftsidebarh2.jpg) right top no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  padding:7px 0 0 15px; margin-bottom:10px;}
 .sidebar-container {padding:0 10px 10px 15px;}
 #sidebar h2 {display:block; background: url(images/sidebarh2.jpg) -1px 0 no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
@@ -169,3 +171,121 @@ img.alignleft {margin-right:10px;}
 }
 
 .blog #searchform .searchfield {display:block; float:left; background:#000; color:#fff; border:solid 1px #111; padding:4px;}
+
+
+
+
+
+
+#newspaper-b
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #69c;
+}
+/*#newspaper-b th
+{
+	padding: 15px 10px 10px 10px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #039;
+}
+#newspaper-b tbody
+{
+	background: #e8edff;
+}
+#newspaper-b td
+{
+	padding: 10px;
+	color: #669;
+	border-top: 1px dashed #fff;
+}
+#newspaper-b tbody tr:hover td
+{
+	color: #339 ;
+	background: #d0dafd;
+}*/
+
+
+/* 
+	Grey Suits you Sir. Please host the images on your own server.
+	written by Stuart Colville http://www.muffinresearch.co.uk
+*/
+
+table,td
+{
+	border               : 1px solid #CCC;
+	border-collapse      : collapse;
+  font                 : small/1.5 "Tahoma", "Bitstream Vera Sans", Verdana, Helvetica, sans-serif;
+}
+table
+{
+	border                :none;
+	border                :1px solid #CCC;
+}
+thead th,
+tbody th
+{
+	background            : #FFF url(th_bck.gif) repeat-x;
+  color                 : #666;  
+	padding               : 5px 10px;
+  border-left           : 1px solid #CCC;
+}
+tbody th
+{
+  background            : #fafafb;
+  border-top            : 1px solid #CCC;
+  text-align            : left;
+  font-weight           : normal;
+}
+tbody tr td
+{
+	padding               : 5px 10px;
+  color                 : #666;
+}
+tbody tr:hover
+{
+  background            : #FFF url(tr_bck.gif) repeat;
+}
+
+tbody tr:hover td
+{
+  color                 : #454545;
+}
+tfoot td,
+tfoot th
+{
+  border-left           : none;
+  border-top            : 1px solid #CCC;
+	padding               : 4px;
+  background            : #FFF url(foot_bck.gif) repeat;
+  color                 : #666;
+}
+caption
+{
+	text-align            : left;
+	font-size             : 120%;
+	padding               : 10px 0;
+	color                 : #666;
+}
+table a:link
+{
+	color                 : #666;
+}
+table a:visited
+{
+	color                 : #666;
+}
+table a:hover
+{
+	color                 : #003366;
+	text-decoration       : none;
+}
+table a:active
+{
+	color                 : #003366;
+}
