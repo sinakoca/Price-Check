@@ -32,7 +32,6 @@ def add(request):
     
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    print wish_list.products
     if product_id:
         product_object = products.find_one({'_id' : ObjectId(product_id) })
         if product_object:
@@ -40,15 +39,37 @@ def add(request):
             wish_list.add_product(product, quantity)
     request.session['wish_list'] = wish_list
     return render_to_response('index.html', {'wish_list' : wish_list})
-    
-def remove(request):
-    product_id = request.GET.get('product_id')
 
+def wish_list(request):
+    product_id = request.GET.get('product_id')
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    wish_list.remove_product(product_id)
+    
+    return render_to_response('list.html', {'wish_list' : wish_list})
+    
+# def remove(request):
+#     product_id = request.GET.get('product_id')
+# 
+#     _check_session_wish_list(request.session)
+#     wish_list = _get_wish_list(request.session)
+#     wish_list.remove_product(product_id)
+#     request.session['wish_list'] = wish_list
+#     return render_to_response('index.html', {'wish_list' : wish_list})
+
+def update(request):
+    product_id = request.GET.get('product_id')
+    quantity_value = request.GET.get('quantity')
+    print quantity_value
+    if not quantity_value.isdigit():
+        quantity_value = '1'
+    print quantity_value
+    quantity = int(quantity_value)
+    _check_session_wish_list(request.session)
+    wish_list = _get_wish_list(request.session)
+    
+    wish_list.update_product(product_id, quantity)
     request.session['wish_list'] = wish_list
-    return render_to_response('index.html', {'wish_list' : wish_list})
+    return render_to_response('list.html', {'wish_list' : wish_list})
 
 def _check_session_wish_list(session):
     if 'wish_list' not in session:

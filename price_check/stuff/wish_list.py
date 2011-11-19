@@ -19,3 +19,9 @@ class WishList(object):
                 self.products.remove((p, q))
                 break
     
+    def update_product(self, product_id, quantity):
+        for p, q in self.products:
+            if p.id == product_id:
+                self.products.remove((p, q))
+                self.products.append((p, quantity))
+                break

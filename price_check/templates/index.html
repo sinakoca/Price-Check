@@ -21,6 +21,5 @@
 {% for p, q in wish_list.products %}
 <div>
     {{ p.name }} - {{ q }}
-    <form action='/remove' method=GET><input type='submit' value='Remove' /><input type='hidden' name='product_id' value='{{ p.id }}'></form>
 </div>
 {% endfor %}
