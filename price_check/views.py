@@ -1,3 +1,4 @@
+import pprint
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect, \
      HttpResponseBadRequest, Http404
@@ -9,6 +10,7 @@ from stuff.wish_list import WishList
 
 connection = pymongo.Connection('localhost', 27017)
 products = connection.db.products
+retailers = connection.db.retailers
 
 def index(request):
     _check_session_wish_list(request.session)
@@ -71,6 +73,32 @@ def update(request):
     wish_list.update_product(product_id, quantity)
     request.session['wish_list'] = wish_list
     return render_to_response('list.html', {'wish_list' : wish_list})
+
+def compare(request):
+    _check_session_wish_list(request.session)
+    wish_list = _get_wish_list(request.session)
+    _check_session_city(request.session)
+    city = _get_city(request.session)
+    # get retailers based on location
+    retailer_objects = retailers.find({'city' : city})
+    retailer_ids, retailer_names = [], []
+    for r in retailer_objects:
+        retailer_ids.append(r['id'])
+        retailer_names.append(r['name'])
+    products_with_prices = []
+    for p, q in wish_list.products:
+        prices = []
+        # print p.retailers, retailer_ids
+        for retailer_id in retailer_ids:
+            retailer = p.retailers.get(retailer_id)
+            price = None
+            if retailer:
+                price = retailer.get('price')
+            prices.append(price)
+        products_with_prices.append((p, q, prices))
+    pprint.pprint(products_with_prices)
+    return render_to_response('compare.html', {'products_with_prices' : products_with_prices,
+            'retailer_names' : retailer_names})
 
 def _check_session_wish_list(session):
     if 'wish_list' not in session:

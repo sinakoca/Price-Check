@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     url(r'^add$', 'price_check.views.add'),
     url(r'^wish_list$', 'price_check.views.wish_list'),
     url(r'^update$', 'price_check.views.update'),
+    url(r'^compare$', 'price_check.views.compare'),
+    
     # Examples:
     # url(r'^$', 'price_check.views.home', name='home'),
     # url(r'^price_check/', include('price_check.foo.urls')),
