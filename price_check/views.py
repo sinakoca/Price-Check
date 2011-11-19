@@ -125,7 +125,7 @@ def _check_session_wish_list(session):
 def _get_wish_list(session):
     return session['wish_list']
 
-def _check_session_city(session):
+def _check_session_city(request):
     if 'city' not in session:
         ip = get_client_ip(request)
         # ip = '62.85.60.2'
