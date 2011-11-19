@@ -19,7 +19,7 @@ retailers = connection.db.retailers
 def index(request):
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request.session)
+    _check_session_city(request)
     city = _get_city(request.session)
     return render_to_response('index.html', {'city' : city, 'wish_list' : wish_list})
     
@@ -27,7 +27,7 @@ def search(request):
     query = request.GET.get('q') or ''
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request.session)
+    _check_session_city(request)
     city = _get_city(request.session)
     product_list = []
     relevant_productcs = products.find({'keywords' : query})
@@ -46,7 +46,7 @@ def add(request):
     
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request.session)
+    _check_session_city(request)
     city = _get_city(request.session)
     if product_id:
         product_object = products.find_one({'_id' : ObjectId(product_id) })
@@ -60,7 +60,7 @@ def wish_list(request):
     product_id = request.GET.get('product_id')
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request.session)
+    _check_session_city(request)
     city = _get_city(request.session)
     
     return render_to_response('list.html', {'city' : city, 'wish_list' : wish_list})
@@ -84,7 +84,7 @@ def update(request):
     quantity = int(quantity_value)
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request.session)
+    _check_session_city(request)
     city = _get_city(request.session)
     
     wish_list.update_product(product_id, quantity)
@@ -94,7 +94,7 @@ def update(request):
 def compare(request):
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request.session)
+    _check_session_city(request)
     city = _get_city(request.session)
     # get retailers based on location
     retailer_objects = retailers.find({'city' : city})
