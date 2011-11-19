@@ -2,6 +2,6 @@
 *.pyc
 \#*
 .\#*
-.DS_Store
+*.DS_Store
 sqlite.db
 __MACOSX/*
