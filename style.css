@@ -10,7 +10,7 @@ ul {list-style:none;}
 #rightheader {background:url(images/coffeebox-ads.jpg) no-repeat; height:326px; padding-top:8px; float:right; width:284px;}
 #featured-dl {background:url(images/slidepng.png) no-repeat; width:597px; height:233px; overflow:hidden;}
 #slidewrapper {padding:20px 20px 0 20px;}
-#homeheader h2 {display:block; font:bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-shadow:#2a3107 1px 1px 1px; color:#ece4d8; margin-bottom:10px; padding-top:10px;}
+#homeheader h2 {display:block; font:bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif; text-shadow:#2a3107 1px 1px 1px; color:#ece4d8; margin-bottom:10px; padding-top:10px;}
 #content { background:url(images/sidebarbg.jpg) right top repeat-y;}
 #left {float:left; width:645px;}
 #sidebar {float:right; width:300px;}
@@ -19,11 +19,12 @@ ul {list-style:none;}
 #content {position:relative;}
 #sidebarhead {background:url(images/sidebarhead.jpg) right top no-repeat; height:50px; margin-bottom:10px;}
 #leftsidebar {width:226px; background:url(images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}
-#leftsidebar h2 {display:block; background:url(images/leftsidebarh2.jpg) right top no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; padding:7px 0 0 15px; margin-bottom:10px;}
+#leftsidebar h2 {display:block; background:url(images/leftsidebarh2.jpg) right top no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  padding:7px 0 0 15px; margin-bottom:10px;}
 .sidebar-container {padding:0 10px 10px 15px;}
-#sidebar h2 {display:block; background: url(images/sidebarh2.jpg) -1px 0 no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
+#sidebar h2 {display:block; background: url(images/sidebarh2.jpg) -1px 0 no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
+#midcolumn_results {width:625px; float:right; padding:10px 5px 10px 2px;}
 #midcolumn {width:405px; float:right; padding:10px 5px 10px 2px;}
-#midcolumn .subhead {display:block; background: #E7EFCA; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
+#midcolumn .subhead {display:block; background: #E7EFCA; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
 #leftsidebar h2, #sidebar h2, .subhead {text-shadow:#fff 1px 1px 1px; color:#736962!important; font-weight:bold;}
 #footer {background:url(images/footer.jpg) no-repeat; height:195px;}
 .tplinfo {display:block; margin:0;}
@@ -62,7 +63,7 @@ a:visited, activer { color:#4c561f; text-decoration:none;}
 h1#sitename {display:block; font:bold 30px Georgia, "Times New Roman", Times, serif; color:#fff; padding:8px 5px 0 10px; float:left;}
 
 #nav {list-style:none; display:block; float:right; width:550px;}
-#nav li {display:inline; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; text-shadow:#000 1px 1px 1px;}
+#nav li {display:inline; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-shadow:#000 1px 1px 1px;}
 #nav li a {display:block; height:35px; padding:12px 17px 0 15px; float:left; color:#D3C8C1;}
 #nav li a:visited, #nav li a:active { color:#D3C8C1;}
 #nav li a:hover, #nav li.active a {color:#fff; background:url(images/active-menu.jpg) center bottom no-repeat;}
@@ -107,10 +108,10 @@ h1#sitename {display:block; font:bold 30px Georgia, "Times New Roman", Times, se
 
 .css_templates .post .bogpost {display:none!important;}
 #main {padding:10px;}
-#main h2 {display:block; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; border-bottom:10px;}
+#main h2 {display:block; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif;  border-bottom:10px;}
 #main table {width:100%; margin-bottom:10px;}
 #main table td {padding:3px;}
-#main table th {padding:3px; background:#444138; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; color:#ccc; text-shadow: #000 1px 1px 1px;}
+#main table th {padding:3px; background:#444138; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  color:#ccc; text-shadow: #000 1px 1px 1px;}
 a.new-topic { font:bold 11px "Trebuchet MS", Arial, Helvetica, sans-serif!important; color:#fff!important;}
 a.new-topic:active, a.new-topic:visited {color:#fff;}
 #main #latest a {color:#000;}
