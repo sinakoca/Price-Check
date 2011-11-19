@@ -1,6 +1,8 @@
 <div>
-	<input id="s" name="s" value="{{ query }}" type="text">
-	<input id="searchsubmit" type="image" src="images/searchgobtn.png" alt="search">
+    <form action='/search?q= {{ query }}' method=GET >
+    	<input id="q" name="q" value="{{ query }}" type="text">
+    	<input type='submit' value="Search">
+	</form>
 </div>
 <div>Products</div>
 <br/>
