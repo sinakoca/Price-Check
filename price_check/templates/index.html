@@ -1,153 +1,72 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Price Check - Home</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/easySlider1.5.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){	
-                $("#slider").easySlider({
-                    auto: true, 
-                    continuous: true
-                });
-                $("#slider2").easySlider({
-                    auto: true, 
-                    continuous: true
+{% extends "common.html" %}
 
-                });			
-            });	
-        </script>
+{% block left %}
+<div id="leftsidebar">
 
-        <link href="css/slider.css" rel="stylesheet" type="text/css" />
-    </head>
+    <h2>Maxima Campaigns</h2>
+    <ul id="templatelist">
+        <li>
+            <h3 class="templatename">Tere Piim</h3>
+            <img src="product_images/tere_piim.jpg" width="174" height="101" alt="template" /> 
+            <p class="tplinfo">
+                Price : 0.60 Euros
+                <!--<a href="#" class="morebtn"><span>preview</span></a>-->
 
-    <body>
-        <div id="wrap">
-            <div id="topribbon">
-                <h1 id="sitename">
-
-                    <!--  <img src="images/cssheaven-logo.gif" width="183" height="32" alt="CSS Heaven | Free CSS Templates" /> </h1>-->
-
-                    <ul id="nav">
-                        <li class="active"><a href="">Home</a></li>
-                                  
-
-                        <li><a href="blog">Contact</a></li>
-
-                    </ul>
-                    <div class="clear"></div>
-            </div>
-
-            <div id="content">
-                <div id="left">
-                    <div id="search">
-                        <form method="GET" id="searchform" action="/search?q= {{ query }}">
-                            <div>
-                                <input id="q" name="q" class="searchfield" type="text" value="{{ query }}" />
-                                <input id="searchsubmit" type="image" src="images/search-go.jpg" class="searchgo"  value="" />
-                            </div>
-                        </form>
-
-                    </div>
-
-                    <div id="leftsidebar">
-
-                        <h2>Maxima Campaigns</h2>
-                        <ul id="templatelist">
-                            <li>
-                                <h3 class="templatename">Tere Piim</h3>
-                                <img src="product_images/tere_piim.jpg" width="174" height="101" alt="template" /> 
-                                <p class="tplinfo">
-                                    Price : 0.60 Euros
-                                    <!--<a href="#" class="morebtn"><span>preview</span></a>-->
-
-                                </p>
-                            </li>
+            </p>
+        </li>
 
 
 
-                        </ul>
-                        <div class="previewmore"> <a href="#"><img src="images/more-btm-btn.jpg" width="214" height="49" alt="More" /></a></div>
+    </ul>
+    <div class="previewmore"> <a href="#"><img src="images/more-btm-btn.jpg" width="214" height="49" alt="More" /></a></div>
 
-                    </div>
+</div>
 
-                    <div id="leftsidebar">
+<div id="leftsidebar">
 
-                        <h2>Prisma Campaigns</h2>
-                        <ul id="templatelist">
-                            <li>
-                                <h3 class="templatename">Tere Piim</h3>
-                                <img src="product_images/tere_piim.jpg" width="174" height="101" alt="template" /> 
-                                <p class="tplinfo">
-                                    Price : 0.60 Euros
-                                    <!--<a href="#" class="morebtn"><span>preview</span></a>-->
+    <h2>Prisma Campaigns</h2>
+    <ul id="templatelist">
+        <li>
+            <h3 class="templatename">Tere Piim</h3>
+            <img src="product_images/tere_piim.jpg" width="174" height="101" alt="template" /> 
+            <p class="tplinfo">
+                Price : 0.60 Euros
+                <!--<a href="#" class="morebtn"><span>preview</span></a>-->
 
-                                </p>
-                            </li>
-
-
-
-                        </ul>
-                        <div class="previewmore"> <a href="#"><img src="images/more-btm-btn.jpg" width="214" height="49" alt="More" /></a></div>
-
-                    </div>
-
-                    <div id="leftsidebar">
-
-                        <h2>Rimi Campaigns</h2>
-                        <ul id="templatelist">
-                            <li>
-                                <h3 class="templatename">Tere Piim</h3>
-                                <img src="product_images/tere_piim.jpg" width="174" height="101" alt="template" /> 
-                                <p class="tplinfo">
-                                    Price : 0.60 Euros
-                                    <!--<a href="#" class="morebtn"><span>preview</span></a>-->
-
-                                </p>
-                            </li>
+            </p>
+        </li>
 
 
 
-                        </ul>
-                        <div class="previewmore"> <a href="#"><img src="images/more-btm-btn.jpg" width="214" height="49" alt="More" /></a></div>
+    </ul>
+    <div class="previewmore"> <a href="#"><img src="images/more-btm-btn.jpg" width="214" height="49" alt="More" /></a></div>
 
-                    </div>
+</div>
 
+<div id="leftsidebar">
 
+    <h2>Rimi Campaigns</h2>
+    <ul id="templatelist">
+        <li>
+            <h3 class="templatename">Tere Piim</h3>
+            <img src="product_images/tere_piim.jpg" width="174" height="101" alt="template" /> 
+            <p class="tplinfo">
+                Price : 0.60 Euros
+                <!--<a href="#" class="morebtn"><span>preview</span></a>-->
 
-                    <div id="leftheader">
-
-
-
-                    </div>
-
-                </div>
-
-
-
-                <div id="sidebar">
-                    <div id="sidebarhead">
-                        <h2 class="hide">Sidebar</h2>
-                    </div>
-                    <h2>Subscribe</h2>
-                    <div class="sidebar-container">
-                        <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=RSFeeds', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-
-                            <label>Enter your email address:</label>
-                            <div class="fieldcontainer">
-                                <input  name="email" type="text" class="txtfield"/></p><input type="hidden" value="RSFeeds" name="uri"/><input type="hidden" name="loc" value="en_US"/>
-                            </div>
-                            <div><input type="image" src="images/subscribe.jpg" value="Subscribe" /></div></form></div>
+            </p>
+        </li>
 
 
 
-                </div>
-                <div class="clear"></div>
+    </ul>
+    <div class="previewmore"> <a href="#"><img src="images/more-btm-btn.jpg" width="214" height="49" alt="More" /></a></div>
 
-            </div>
-            
-        </div>
-    </body>
-</html>
+</div>
+{% endblock left %}
+
+{% block right %}
+
+{% include "subscribe.html" %}
+
+{% endblock right %}
