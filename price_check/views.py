@@ -21,24 +21,26 @@ def search(request):
     for p in relevant_productcs:
         product = Product(p)
         product_list.append(product)
-    return render_to_response('index.html', {'query' : query, 'products' : product_list})
+    return render_to_response('index.html', {'query' : query, 'products' : product_list, 'wish_list' : _get_wish_list(request.session)})
     
 def add(request):
     product_id = request.GET.get('product_id')
     
     # get wish list from session
     _check_session_wish_list(request.session)
-    wish_list = request.session['wish_list']
+    wish_list = _get_wish_list(request.session)
     print wish_list.created, wish_list.products
     if product_id:
         product_object = products.find_one({'_id' : ObjectId(product_id) })
         if product_object:
             product = Product(product_object)
             wish_list.add_product(product)
-    print wish_list.created, wish_list.products
     request.session['wish_list'] = wish_list
     return render_to_response('index.html', {'wish_list' : wish_list})
 
 def _check_session_wish_list(session):
     if 'wish_list' not in session:
         session['wish_list'] = WishList()
+
+def _get_wish_list(session):
+    return session['wish_list']

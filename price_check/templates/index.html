@@ -7,10 +7,12 @@
 <div>Products</div>
 <br/>
 {% for p in products %}
-<div>{{ p.name }} : {{ p.price }} <form action='/add?product_id={{ p.id }}' method=GET><input type='submit' value='Add to WishList' /></form></div>
+<div>{{ p.name }} : {{ p.price }} <form action='/add' method=GET><input type='submit' value='Add to WishList' /><input type='hidden' name='product_id' value='{{ p.id }}'></form></div>
 {% endfor %}
 
 <div>WishList:</div>
 {% for p in wish_list.products %}
-<div>{{ p.name }} : {{ p.price }} </div>
+<div>
+    {{ p.name }} : {{ p.price }}
+</div>
 {% endfor %}
