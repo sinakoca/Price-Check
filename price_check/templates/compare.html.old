@@ -1,0 +1,22 @@
+<table border=1>
+    <tr>
+        <td>Price(Quantity)</td>
+        {% for retailer_name in retailer_names %}
+            <td>{{ retailer_name }}</td>
+        {% endfor %}
+    </tr>
+    {% for p, q, prices in products_with_prices %}
+        <tr>
+            <td>{{ p.name }} ({{ q }})</td>
+            {% for price in prices %}
+                <td>{{ price }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    <tr>
+        <td><b>Total:</b></td>
+        {% for total in totals %}
+            <td><b>{{ total }}&euro;</b></td>
+        {% endfor %}
+    </tr>
+</table>
