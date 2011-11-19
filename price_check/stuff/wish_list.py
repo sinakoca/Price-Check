@@ -12,6 +12,7 @@ class WishList(object):
                 return
         self.products.append((product, quantity))
         self.last_modified = datetime.now()
+        self.products.sort(key=lambda x:x[0].name)
 
     def remove_product(self, product_id):
         for p, q in self.products:

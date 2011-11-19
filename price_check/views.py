@@ -1,4 +1,5 @@
 import pprint
+from operator import itemgetter
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect, \
      HttpResponseBadRequest, Http404
@@ -65,6 +66,8 @@ def wish_list(request):
 
 def update(request):
     product_id = request.GET.get('product_id')
+    if not product_id:
+        raise Http404()
     quantity_value = request.GET.get('quantity')
     if not quantity_value.isdigit():
         quantity_value = '1'
@@ -74,7 +77,7 @@ def update(request):
     
     wish_list.update_product(product_id, quantity)
     request.session['wish_list'] = wish_list
-    return render_to_response('list.html', {'wish_list' : wish_list})
+    return render_to_response('index.html', {'wish_list' : wish_list})
 
 def compare(request):
     _check_session_wish_list(request.session)

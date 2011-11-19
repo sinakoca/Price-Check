@@ -11,7 +11,7 @@
 
 <br/>
 {% for p in products %}
-<div>{{ p.name }} : {{ p.price }}
+<div>{{ p.name }}
     <form action='/add' method=GET>
         <input type='hidden' name='product_id' value='{{ p.id }}' />
         <input type='text' name='quantity' />

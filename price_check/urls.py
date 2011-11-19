@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^search$', 'price_check.views.search'),
     url(r'^add$', 'price_check.views.add'),
     url(r'^wish_list$', 'price_check.views.wish_list'),
-    url(r'^update$', 'price_checkheck.views.update'),
+    url(r'^update$', 'price_check.views.update'),
     url(r'^compare$', 'price_check.views.compare'),
     
     (r'^(?P<path>js/.*)', 'django.views.static.serve',
