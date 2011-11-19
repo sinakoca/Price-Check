@@ -2,58 +2,34 @@
 
 {% block left %}
 <div id="midcolumn_results">
-<h2 class="subhead">Search Results</h2>
+<h2 class="subhead">Price Comparison</h2>
 <table id="newspaper-b" summary="2007 Major IT Companies' Profit">
     <thead>
     	<tr>
-        	<th scope="col">Company</th>
-            <th scope="col">Q1</th>
-
-            <th scope="col">Q2</th>
-            <th scope="col">Q3</th>
-            <th scope="col">Q4</th>
+        	<th scope="col">Product (quantity)</th>
+        	{% for retailer_name in retailer_names %}
+        	<th scope="col" align="right">{{ retailer_name }}</th>
+        	{% endfor %}
         </tr>
     </thead>
-        <tfoot>
-    	<tr>
-
-        	<td colspan="5"><em>The above data were fictional and made up, please do not sue me</em></td>
+    <tbody>
+        {% for p, q, prices in products_with_prices %}
+            <tr>
+                <td>{{ p.name }} ({{ q }})</td>
+                {% for price in prices %}
+                    <td align="right">{{ price }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+        <td align="right"><b>Total:</b></td>
+        {% for total in totals %}
+            <td align="right"><b>{{ total }}&euro;</b></td>
+        {% endfor %}
         </tr>
     </tfoot>
-    <tbody>
-    	<tr>
-        	<td>Microsoft</td>
-            <td>20.3</td>
-
-            <td>30.5</td>
-            <td>23.5</td>
-            <td>40.3</td>
-        </tr>
-        <tr>
-        	<td>Google</td>
-            <td>50.2</td>
-
-            <td>40.63</td>
-            <td>45.23</td>
-            <td>39.3</td>
-        </tr>
-        <tr>
-        	<td>Apple</td>
-            <td>25.4</td>
-
-            <td>30.2</td>
-            <td>33.3</td>
-            <td>36.7</td>
-        </tr>
-        <tr>
-        	<td>IBM</td>
-            <td>20.4</td>
-
-            <td>15.6</td>
-            <td>22.3</td>
-            <td>29.3</td>
-        </tr>
-    </tbody>
 </table>
 </div>
 {% endblock left %}
