@@ -82,23 +82,26 @@ def compare(request):
     # get retailers based on location
     retailer_objects = retailers.find({'city' : city})
     retailer_ids, retailer_names = [], []
+    retailer_totals = []
     for r in retailer_objects:
         retailer_ids.append(r['id'])
         retailer_names.append(r['name'])
+    totals = [0] * len(retailer_ids)
     products_with_prices = []
     for p, q in wish_list.products:
         prices = []
-        # print p.retailers, retailer_ids
-        for retailer_id in retailer_ids:
+        for i, retailer_id in enumerate(retailer_ids):
             retailer = p.retailers.get(retailer_id)
             price = None
             if retailer:
                 price = retailer.get('price')
+                totals[i] += price * q
             prices.append(price)
         products_with_prices.append((p, q, prices))
     pprint.pprint(products_with_prices)
+    print totals
     return render_to_response('compare.html', {'products_with_prices' : products_with_prices,
-            'retailer_names' : retailer_names})
+            'retailer_names' : retailer_names, 'totals' : totals})
 
 def _check_session_wish_list(session):
     if 'wish_list' not in session:
