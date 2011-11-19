@@ -3,18 +3,33 @@ import pymongo
 PRODUCTS = [
     {
         'name' : 'Milk 1L',
-        'price' : '0.99',
-        'keywords' : ['milk', 'piim']
+        'keywords' : ['milk', 'piim'],
+        'retail' : {
+            'maxima_taru' : {
+                'price' : 0.99,
+                'discout' : 0.1
+            }
+        }
     },
     {
         'name' : 'Bread',
-        'price' : '1.99',
-        'keywords' : ['bread', 'tortila']
+        'keywords' : ['bread', 'tortila'],
+        'retail' : {
+            'maxima_taru' : {
+                'price' : 0.99,
+                'discout' : 0.1
+            }
+        }
     },
     {
         'name' : 'Milk 2.0L',
-        'price' : '1.89',
-        'keywords' : ['milk', 'piim']
+        'keywords' : ['milk', 'piim'],
+        'retail' : {
+            'maxima_taru' : {
+                'price' : 0.99,
+                'discout' : 0.1
+            }
+        }
     }
 ]
 

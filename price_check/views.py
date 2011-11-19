@@ -25,14 +25,19 @@ def search(request):
     
 def add(request):
     product_id = request.GET.get('product_id')
+    quantity_value = request.GET.get('quantity')
+    if not quantity_value.isdigit():
+        quantity_value = '1'
+    quantity = int(quantity_value)
     
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
+    print wish_list.products
     if product_id:
         product_object = products.find_one({'_id' : ObjectId(product_id) })
         if product_object:
             product = Product(product_object)
-            wish_list.add_product(product)
+            wish_list.add_product(product, quantity)
     request.session['wish_list'] = wish_list
     return render_to_response('index.html', {'wish_list' : wish_list})
     

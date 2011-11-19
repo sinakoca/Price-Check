@@ -4,16 +4,23 @@
     	<input type='submit' value="Search">
 	</form>
 </div>
-<div>Products</div>
+<div>Products:</div>
+
 <br/>
 {% for p in products %}
-<div>{{ p.name }} : {{ p.price }} <form action='/add' method=GET><input type='submit' value='Add to WishList' /><input type='hidden' name='product_id' value='{{ p.id }}'></form></div>
+<div>{{ p.name }} : {{ p.price }}
+    <form action='/add' method=GET>
+        <input type='hidden' name='product_id' value='{{ p.id }}' />
+        <input type='text' name='quantity' />
+        <input type='submit' value='Add to WishList' />
+    </form>
+</div>
 {% endfor %}
 
 <div>WishList:</div>
-{% for p in wish_list.products %}
+{% for p, q in wish_list.products %}
 <div>
-    {{ p.name }} : {{ p.price }}
+    {{ p.name }} - {{ q }}
     <form action='/remove' method=GET><input type='submit' value='Remove' /><input type='hidden' name='product_id' value='{{ p.id }}'></form>
 </div>
 {% endfor %}

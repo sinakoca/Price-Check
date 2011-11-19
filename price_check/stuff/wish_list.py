@@ -6,18 +6,16 @@ class WishList(object):
         self.created = datetime.now()
         self.last_modified = datetime.now()
     
-    def add_product(self, product):
-        for p in self.products:
+    def add_product(self, product, quantity):
+        for p, _ in self.products:
             if p.id == product.id:
                 return
-        self.products.append(product)
+        self.products.append((product, quantity))
         self.last_modified = datetime.now()
 
     def remove_product(self, product_id):
-        for p in self.products:
-            print p.id, product_id, p.id == product_id, p.id.__class__, product_id.__class__
+        for p, q in self.products:
             if p.id == product_id:
-                print 'removed'
-                self.products.remove(p)
+                self.products.remove((p, q))
                 break
     
