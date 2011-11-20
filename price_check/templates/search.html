@@ -6,16 +6,18 @@
     <h2 class="subhead">Search Results</h2>
     {% for p in products %}
     <div class="post">
-        <h3>{{ p.name }}</h3>
-        <div class="postbottom">
-            <a href="#" class="morebtn"><span>Add to Wish List</span></a>
-            <div class="clear"></div>
-        </div>
-        <form action='/add' method=GET>
+         <form action='/add' method=GET>
             <input type='hidden' name='product_id' value='{{ p.id }}' />
-            <input type='text' name='quantity' />
+            <input type='text' name='quantity' size="2" maxlength="2" />
+            X {{ p.name }}
             <input type='submit' value='Add to Wish List' />
         </form>
+        
+        <div class="postbottom">
+<!--            <a href="#" class="morebtn"><span>Add to Wish List</span></a>-->
+            <div class="clear"></div>
+        </div>
+       
     </div>
     {% endfor %}
 </div>
