@@ -27,6 +27,7 @@ PRODUCTS = [
     {
         'name' : 'Milk 1L',
         'keywords' : ['milk', 'piim'],
+        'image' : 'tere_piim.jpg',
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.99

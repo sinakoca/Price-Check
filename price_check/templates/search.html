@@ -6,10 +6,15 @@
     <h2 class="subhead">Search Results</h2>
     {% for p in products %}
     <div class="post">
+        {% if p.image %}
+            <img src="/product_images/{{ p.image }}"  height="90" width="90" />
+        {% else %}
+            <img src="/product_images/no_image.gif" height="90" width="60" />
+        {% endif %}
          <form action='/add' method=GET>
             <input type='hidden' name='product_id' value='{{ p.id }}' />
             <input type='text' name='quantity' size="2" maxlength="2" />
-            X {{ p.name }}
+            X <b>{{ p.name }}</b>
             <input type='submit' value='Add to Wish List' />
         </form>
         
