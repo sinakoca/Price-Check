@@ -51,7 +51,7 @@ PRODUCTS = [
     {
         'name' : 'White Bread',
         'keywords' : ['bread', 'tortilla', 'white'],
-        'image' : whitebread.jpg,
+        'image' : 'whitebread.jpg',
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.42
@@ -70,7 +70,7 @@ PRODUCTS = [
     {
         'name' : 'Pinar Milk 2.0 Lt',
         'keywords' : ['milk', 'piim'],
-        'image' : pinar.jpg,
+        'image' : 'pinar.jpg',
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 1.31
@@ -111,7 +111,7 @@ PRODUCTS = [
     {
         'name' : 'Persil 3 Kg',
         'keywords' : ['detergent', 'persil'],
-        'image' : persil.jpeg,
+        'image' : 'persil.jpeg',
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.39
@@ -254,6 +254,7 @@ PRODUCTS = [
 
         'name' : 'Fresco Frozen Vegetable',
         'keywords' : ['vegetable', 'Segu'],
+        'image' : '07.jpg',
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.99
