@@ -124,19 +124,15 @@ def compare(request):
     products_with_prices = []
     for p, q in wish_list.products:
         prices = []
-        minimal_price_index = 0
-        minimal_price = 1000000
         for i, retailer_id in enumerate(retailer_ids):
             retailer = p.retailers.get(retailer_id)
             price = None
             if retailer:
                 price = retailer.get('price')
                 totals[i] += price * q
-                if price < minimal_price:
-                    minimal_price = price
-                    minimal_price_index = i
-            prices.append((price, False))
-        prices[minimal_price_index] = prices[minimal_price_index][0], True
+            prices.append(price)
+        # prices[minimal_price_index] = prices[minimal_price_index][0], True
+        prices = [(p, p == min(prices)) for p in prices]
         products_with_prices.append((p, q, prices))
     totals = [(t, t == min(totals)) for t in totals]
     return render_to_response('compare.html', {'user': request.user, 'products_with_prices' : products_with_prices,
