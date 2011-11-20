@@ -4,6 +4,7 @@
 
 <div id="midcolumn_results">
     <h2 class="subhead">Search Results</h2>
+    {% if products %}
     {% for p in products %}
     <div class="post">
         {% if p.image %}
@@ -27,6 +28,9 @@
        
     </div>
     {% endfor %}
+    {% else %}
+        There is no result matching your search
+    {% endif %}
 </div>
 
 {% endblock left %}
