@@ -12,7 +12,8 @@ ul {list-style:none;}
 #featured-dl {background:url(/images/slidepng.png) no-repeat; width:597px; height:233px; overflow:hidden;}
 #slidewrapper {padding:20px 20px 0 20px;}
 #homeheader h2 {display:block; font:bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif; text-shadow:#2a3107 1px 1px 1px; color:#ece4d8; margin-bottom:10px; padding-top:10px;}
-#content { background:url(/images/sidebarbg.jpg) right top repeat-y;}
+/*#content { background:url(/images/sidebarbg.jpg) right top repeat-y;}*/
+#content { background-color:#ffffff;}
 #left {float:left; width:645px;}
 #sidebar {float:right; width:300px;}
 #search {background:url(/images/searchbar.jpg) left top no-repeat; height:50px;}
