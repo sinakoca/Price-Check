@@ -39,9 +39,10 @@
                     <!--                        <li class="active" ><a href="">Home</a></li>
                                             <li><a href="blog">Contact</a></li>-->
                 </ul>
-                <p style="font-size: small;" >
+                <form id="update_locatin" action="/update_location" typ="GET">
+                <p style="font-size: small;text-align:right;" >
                     Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
-                    <form id="update_locatin" action="/update_location" typ="GET">
+                    
                         <select id="change_city" onchange="method(this.value)" class="show" name="city">
                             <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
                             <option value="Tallinn" id="Tallinn">Tallinn</option>
@@ -56,9 +57,9 @@
                             <option value="Rakvere" id="Rakvere">Rakvere</option>
                             <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
                         </select>
-                    </form>
-                </p>
                     
+                </p>
+                </form>
                 <div class="clear"></div>
             </div>
 
