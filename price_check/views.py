@@ -132,7 +132,7 @@ def compare(request):
                 totals[i] += price * q
             prices.append(price)
         # prices[minimal_price_index] = prices[minimal_price_index][0], True
-        prices = [(p, p == min(prices)) for p in prices]
+        prices = [(pr, pr == min(prices)) for pr in prices]
         products_with_prices.append((p, q, prices))
     totals = [(t, t == min(totals)) for t in totals]
     return render_to_response('compare.html', {'user': request.user, 'products_with_prices' : products_with_prices,
