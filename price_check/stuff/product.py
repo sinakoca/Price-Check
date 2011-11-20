@@ -5,3 +5,9 @@ class Product(object):
         self.image = dict_object.get('image')
         self.retailers = dict_object['retailers']
         self.keywords = dict_object['keywords']
+    
+    def __eq__(self, other):
+    	return self.id == other.id
+    
+    def __hash__(self):
+    	return hash(self.id)

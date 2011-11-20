@@ -13,6 +13,7 @@
         {% endif %}
         
          <form action='/add' method=GET>
+            <input name="q" type="hidden" value="{{ query }}" />
             <input type='hidden' name='product_id' value='{{ p.id }}' />
             <input type='text' name='quantity' size="2" maxlength="2" />
             X {{ p.name }}

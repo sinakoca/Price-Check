@@ -24,5 +24,6 @@ class WishList(object):
         for p, q in self.products:
             if p.id == product_id:
                 self.products.remove((p, q))
-                self.products.append((p, quantity))
+                if q > 0:
+                    self.products.append((p, quantity))
                 break

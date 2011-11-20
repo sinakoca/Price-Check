@@ -38,15 +38,18 @@ def search(request):
     _check_session_city(request)
     city = request.GET.get('city') or _get_city(request.session)
     request.session['city'] = city
-    product_list = []
-    relevant_productcs = products.find({'keywords' : query})
-    for p in relevant_productcs:
-        product = Product(p)
-        product_list.append(product)
-    return render_to_response('search.html', {'user': request.user, 'query' : query, 'products' : product_list, 'city' : city,
+    product_set = set()
+    terms = query.lower().split()
+    for term in terms:
+        relevant_productcs = products.find({'keywords' : term})
+        for p in relevant_productcs:
+            product = Product(p)
+            product_set.add(product)
+    return render_to_response('search.html', {'user': request.user, 'query' : query, 'products' : product_set, 'city' : city,
         'wish_list' : wish_list})
     
 def add(request):
+    query = request.GET.get('q') or ''
     product_id = request.GET.get('product_id')
     quantity_value = request.GET.get('quantity')
     if not quantity_value.isdigit():
@@ -55,15 +58,16 @@ def add(request):
     
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request)
-    city = _get_city(request.session)
+    # _check_session_city(request)
+    # city = _get_city(request.session)
     if product_id:
         product_object = products.find_one({'_id' : ObjectId(product_id) })
         if product_object:
             product = Product(product_object)
             wish_list.add_product(product, quantity)
     request.session['wish_list'] = wish_list
-    return render_to_response('index.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list})
+    return HttpResponseRedirect("/search?q=" + query)
+    # return render_to_response('search.html', {'user': request.user, 'query' : query, 'city' : city, 'wish_list' : wish_list})
 
 def wish_list(request):
     product_id = request.GET.get('product_id')
