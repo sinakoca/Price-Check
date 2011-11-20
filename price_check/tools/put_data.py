@@ -97,9 +97,6 @@ PRODUCTS = [
             'maxima_tallinn' : {
                 'price' : 45.99
             },
-            'prisma_tartu' : {
-                'price' : 54.99
-            },
 	    'consum_tartu': {
                 'price' : 58.99
             },
@@ -137,9 +134,6 @@ PRODUCTS = [
             },
             'maxima_tallinn' : {
                 'price' : 8.99
-            },
-            'prisma_tartu' : {
-                'price' : 8.80
             },
 	    'consum_tartu': {
                 'price' : 9.25
@@ -197,9 +191,6 @@ PRODUCTS = [
             },
             'maxima_tallinn' : {
                 'price' : 5.99
-            },
-            'prisma_tartu' : {
-                'price' : 4.66
             },
 	    'consum_tartu': {
                 'price' : 4.88
