@@ -35,31 +35,31 @@
         <div id="wrap">
             <div id="topribbon">
                 <h1 id="sitename"><img src="images/logo.gif" width="133" height="44" /> </h1>
-                    <ul id="nav">
-<!--                        <li class="active" ><a href="">Home</a></li>
-                        <li><a href="blog">Contact</a></li>-->
-                    </ul>
-                <p style="float: right;font-size: small;" >
-                                Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
-                                <form id="update_locatin" action="/update_location" typ="GET">
-                                <select id="change_city" onchange="method(this.value)" class="show" name=city>
-                                    <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
-                                    <option value="Tallinn" id="Tallinn">Tallinn</option>
-                                    <option value="Tartu" id="Tartu">Tartu</option>
-                                    <option value="Parnu" id="Parnu">Pärnu</option>
-                                    <option value="Volga" id="Volga">Valga</option>
-                                    <option value="Viljandi" id="Viljandi">Viljandi</option>
-                                    <option value="Kuressaare" id="Kuressaare">Kuressaare</option>
-                                    <option value="Võru" id="Võru">Võru</option>
-                                    <option value="Rapla" id="Rapla">Rapla</option>
-                                    <option value="Põlva" id="Põlva">Põlva</option>
-                                    <option value="Rakvere" id="Rakvere">Rakvere</option>
-                                    <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
-                                </select>
-                                </form>
-                            </p>
-                
-                    <div class="clear"></div>
+                <ul id="nav">
+                    <!--                        <li class="active" ><a href="">Home</a></li>
+                                            <li><a href="blog">Contact</a></li>-->
+                </ul>
+                <p style="font-size: small;" >
+                    Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
+                    <form id="update_locatin" action="/update_location" typ="GET">
+                        <select id="change_city" onchange="method(this.value)" class="show" name="city">
+                            <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
+                            <option value="Tallinn" id="Tallinn">Tallinn</option>
+                            <option value="Tartu" id="Tartu">Tartu</option>
+                            <option value="Parnu" id="Parnu">Pärnu</option>
+                            <option value="Volga" id="Volga">Valga</option>
+                            <option value="Viljandi" id="Viljandi">Viljandi</option>
+                            <option value="Kuressaare" id="Kuressaare">Kuressaare</option>
+                            <option value="Võru" id="Võru">Võru</option>
+                            <option value="Rapla" id="Rapla">Rapla</option>
+                            <option value="Põlva" id="Põlva">Põlva</option>
+                            <option value="Rakvere" id="Rakvere">Rakvere</option>
+                            <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
+                        </select>
+                    </form>
+                </p>
+                    
+                <div class="clear"></div>
             </div>
 
             <div id="content">
