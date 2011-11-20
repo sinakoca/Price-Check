@@ -40,6 +40,9 @@ PRODUCTS = [
             'comarket_tartu' : {
                 'price' : 0.88
             },
+	    'maxima_tallinn' : {
+                'price' : 0.99
+            },
             'consum_tartu' : {
                 'price' : 0.77
             }
@@ -56,6 +59,9 @@ PRODUCTS = [
             'comarket_tartu' : {
                 'price' : 0.47
             },
+	    'maxima_tallinn' : {
+                'price' : 0.42
+            }, 
             'consum_tartu' : {
                 'price' : 0.51
             }
@@ -71,6 +77,9 @@ PRODUCTS = [
             },
             'comarket_tartu' : {
                 'price' : 1.20
+            },
+	    'maxima_tallinn' : {
+                'price' : 1.31
             },
             'consum_tartu' : {
                 'price' : 1.33
@@ -90,6 +99,12 @@ PRODUCTS = [
             },
             'prisma_tartu' : {
                 'price' : 54.99
+            },
+	    'consum_tartu': {
+                'price' : 58.99
+            },
+	    'comarket_tartu': {
+                'price' : 58.99
             }
         }
     },
@@ -99,6 +114,9 @@ PRODUCTS = [
         'image' : None,
         'retailers' : {
             'maxima_tartu' : {
+                'price' : 0.39
+            },
+	     'maxima_tallinn' : {
                 'price' : 0.39
             },
             'comarket_tartu' : {
@@ -114,14 +132,20 @@ PRODUCTS = [
         'keywords' : ['blanket', 'quilt'],
         'image' : '02.jpg',
         'retailers' : {
-            'maxima_tartu' : {
+             'maxima_tartu' : {
                 'price' : 9.99
             },
-            'comarket_tartu' : {
-                'price' : 14.99
+            'maxima_tallinn' : {
+                'price' : 8.99
             },
-            'consum_tartu' : {
-                'price' : 11.99
+            'prisma_tartu' : {
+                'price' : 8.80
+            },
+	    'consum_tartu': {
+                'price' : 9.25
+            },
+	    'comarket_tartu': {
+                'price' : 8.90
             }
         }
     },
@@ -132,6 +156,9 @@ PRODUCTS = [
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 4.49
+            },
+	    'maxima_tallinn' : {
+                'price' : 9.99
             },
             'comarket_tartu' : {
                 'price' : 6.79
@@ -149,6 +176,9 @@ PRODUCTS = [
             'maxima_tartu' : {
                 'price' : 0.89
             },
+	    'maxima_tallinn' : {
+                'price' : 0.89
+            },
             'comarket_tartu' : {
                 'price' : 1.67
             },
@@ -162,14 +192,20 @@ PRODUCTS = [
         'keywords' : ['coffee', 'coffeebag', 'groundcoffee'],
         'image' : '05.jpg',
         'retailers' : {
-            'maxima_tartu' : {
-                'price' : 4.19
+             'maxima_tartu' : {
+                'price' : 4.99
             },
-            'comarket_tartu' : {
-                'price' : 5.69
+            'maxima_tallinn' : {
+                'price' : 5.99
             },
-            'consum_tartu' : {
-                'price' : 6.72
+            'prisma_tartu' : {
+                'price' : 4.66
+            },
+	    'consum_tartu': {
+                'price' : 4.88
+            },
+	    'comarket_tartu': {
+                'price' : 4.14
             }
         }
     }
@@ -180,6 +216,9 @@ PRODUCTS = [
         'image' : '13.jpg',
         'retailers' : {
             'maxima_tartu' : {
+                'price' : 1.15
+            },
+	    'maxima_tallinn' : {
                 'price' : 1.15
             },
             'comarket_tartu' : {
@@ -199,6 +238,9 @@ PRODUCTS = [
             'maxima_tartu' : {
                 'price' : 0.55
             },
+	    'maxima_tallinn' : {
+                'price' : 0.55
+            },
             'comarket_tartu' : {
                 'price' : 0.35
             },
@@ -211,9 +253,12 @@ PRODUCTS = [
     {
         'name' : 'Segu',
         'keywords' : ['segu', 'Segu'],
-        'image' : '07.jpg',
+        'image' : '07',
         'retailers' : {
             'maxima_tartu' : {
+                'price' : 0.99
+            },
+	    'maxima_tallinn' : {
                 'price' : 0.99
             },
             'comarket_tartu' : {
@@ -233,6 +278,9 @@ PRODUCTS = [
             'maxima_tartu' : {
                 'price' : 1.99
             },
+	    'maxima_tallinn' : {
+                'price' : 1.99
+            },
             'comarket_tartu' : {
                 'price' : 1.65
             },
@@ -248,6 +296,9 @@ PRODUCTS = [
         'image' : '09.jpg',
         'retailers' : {
             'maxima_tartu' : {
+                'price' : 0.99
+            },
+	    'maxima_tallinn' : {
                 'price' : 0.99
             },
             'comarket_tartu' : {
@@ -267,6 +318,9 @@ PRODUCTS = [
             'maxima_tartu' : {
                 'price' : 0.99
             },
+	    'maxima_tallinn' : {
+                'price' : 0.99
+            },
             'comarket_tartu' : {
                 'price' : 0.65
             },
@@ -283,6 +337,9 @@ PRODUCTS = [
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 2.81
+            },
+	    'maxima_tallinn' : {
+                'price' : 2.99
             },
             'comarket_tartu' : {
                 'price' : 1.90
@@ -301,6 +358,9 @@ PRODUCTS = [
             'maxima_tartu' : {
                 'price' : 2.00
             },
+	    'maxima_tallinn' : {
+                'price' : 1.99
+            },
             'comarket_tartu' : {
                 'price' : 1.90
             },
@@ -310,6 +370,7 @@ PRODUCTS = [
         }
     }
 ]
+
 
 if __name__ == '__main__':
     connection = pymongo.Connection('localhost', 27017)
