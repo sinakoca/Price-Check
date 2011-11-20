@@ -251,15 +251,9 @@ PRODUCTS = [
     }
     ,
     {
-<<<<<<< HEAD
+
         'name' : 'Fresco Frozen Vegetable',
         'keywords' : ['vegetable', 'Segu'],
-        'image' : '07.jpg',
-=======
-        'name' : 'Segu',
-        'keywords' : ['segu', 'Segu'],
-        'image' : '07',
->>>>>>> origin/master
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.99
