@@ -4,7 +4,7 @@ body {background: url(/images/htmlbg.jpg) repeat; font:11px Verdana, Geneva, san
 .clear {clear:both;}
 ul {list-style:none;}
 #wrap {width:947px; margin:auto; background:#fff; border-left: solid 8px #f5f5f5; border-right: solid 8px #f5f5f5;}
-#topribbon {background: url(/images/ribbonbg.jpg) repeat-x; height:52px;}
+#topribbon {height:52px;}
 #homeheader {background: url(/images/headerbg-home.jpg) repeat; height:334px; padding:8px; margin-bottom:5px;}
 /*#leftheader {background: url(/images/greenbox.jpg) no-repeat; height:334px; width:637px; float:left;}*/
 #leftheader { height:300px; width:637px; float:left;}
@@ -47,7 +47,7 @@ a.morebtn:hover { color:#fff; background-color:transparent!important;}
 img, a img {border:none;}
 #sidebar ul {display:block; margin-bottom:10px;}
 #forum_list li {display:block; text-shadow:#fff 1px 1px 1px; background:url(/images/sidebar-listdevider.jpg) left bottom repeat-x; padding:3px 3px 8px 3px; margin-bottom:8px;}
-#forum_list li p {display:block;  padding:5px 5px 5px 35px; background: url(/images/icon-comment-sb.jpg)2px 5px no-repeat;}
+#forum_list li p {display:block;  padding:5px 5px 5px 35px; }
 #forum_list li a {text-decoration:none; font-weight:normal;}
 #forum_list li span {display:block; padding-bottom:3px;}
 #forum_list li .title a { color:#333;}
@@ -68,7 +68,7 @@ h1#sitename {display:block; font:bold 30px Georgia, "Times New Roman", Times, se
 #nav li {display:inline; font:bold 16px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-shadow:#000 1px 1px 1px;}
 #nav li a {display:block; height:35px; padding:12px 17px 0 15px; float:left; color:#D3C8C1;}
 #nav li a:visited, #nav li a:active { color:#D3C8C1;}
-#nav li a:hover, #nav li.active a {color:#fff; background:url(/images/active-menu.jpg) center bottom no-repeat;}
+#nav li a:hover, #nav li.active a {color:#fff; }
 #sidebar form label {display:block; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom:8px;}
 #sidebar form {width:263px; margin:auto;}
 #sidebar form div.fieldcontainer { background:url(/images/txtfield-sidebar.jpg) no-repeat; height:42px; width:262px; margin-bottom:8px;}

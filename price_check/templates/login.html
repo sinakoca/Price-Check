@@ -7,10 +7,12 @@
       {% if login_error %}
           <p>Bad e-mail or password</p>
       {% endif %}
-      E-mail: <input type="input" name="email" />
-      <br />
-      Password: <input type="password" name="password" />
-      <input type="submit" value="Log In"/>
+      E-mail: <input type="input" name="email" style="float: right" />
+      <br> <br>
+      Password: <input type="password" name="password" style="float: right"/>
+      <br> <br> <br> 
+      <input type="submit" value="Log In"/><a href="/register" style="padding-left: 30px;">New user</a>
   </form>
-  <p><a href="/register">New user</a></p>
+<br> 
+  
 {% endif %}
