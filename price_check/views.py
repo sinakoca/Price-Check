@@ -38,7 +38,7 @@ def search(request):
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
     _check_session_city(request)
-    city = request.GET.get('city') or _get_city(request.session)
+    city = _get_city(request.session)
     request.session['city'] = city
     product_set = set()
     terms = query.lower().split()
@@ -135,7 +135,7 @@ def compare(request):
         prices = [(pr, pr == min(prices)) for pr in prices]
         products_with_prices.append((p, q, prices))
     totals = [(t, t == min(totals)) for t in totals]
-    return render_to_response('compare.html', {'user': request.user, 'products_with_prices' : products_with_prices,
+    return render_to_response('compare.html', {'user': request.user, 'city' : city, 'products_with_prices' : products_with_prices,
             'retailer_names' : retailer_names, 'totals' : totals})
 
 @csrf_exempt
