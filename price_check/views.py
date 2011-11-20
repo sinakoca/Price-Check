@@ -33,6 +33,8 @@ def index(request, login_error=False):
     
 def search(request):
     query = request.GET.get('q') or ''
+    if not query:
+        return HttpResponseRedirect("/")
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
     _check_session_city(request)
@@ -88,6 +90,7 @@ def wish_list(request):
 #     return render_to_response('index.html', {'wish_list' : wish_list})
 
 def update(request):
+    query = request.GET.get('q') or ''
     product_id = request.GET.get('product_id')
     if not product_id:
         raise Http404()
@@ -97,12 +100,13 @@ def update(request):
     quantity = int(quantity_value)
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
-    _check_session_city(request)
-    city = _get_city(request.session)
+    # _check_session_city(request)
+    # city = _get_city(request.session)
     
     wish_list.update_product(product_id, quantity)
     request.session['wish_list'] = wish_list
-    return render_to_response('index.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list})
+    return HttpResponseRedirect("/search?q=" + query)
+    # return render_to_response('index.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list})
 
 def compare(request):
     _check_session_wish_list(request.session)

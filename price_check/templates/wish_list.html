@@ -9,7 +9,8 @@
                 {# <span class="last">Remove</span> #}
                 <span class="lastdate"></span>
                 <form action='/update' method=GET>
-                     <input type='text' name='quantity' size="2" maxlength="2" value='{{ q }}'  />
+                    <input name="q" type="hidden" value="{{ query }}" />
+                    <input type='text' name='quantity' size="2" maxlength="2" value='{{ q }}'  />
                     <input type='hidden' name='product_id' value='{{ p.id }}'>
                     X {{ p.name }} ({{ q }})
 <!--                    <span class="title">{{ p.name }} ({{ q }})</span>-->

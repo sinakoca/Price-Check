@@ -7,8 +7,10 @@ class WishList(object):
         self.last_modified = datetime.now()
     
     def add_product(self, product, quantity):
-        for p, _ in self.products:
+        for p, q in self.products:
             if p.id == product.id:
+                self.products.remove((p, q))
+                self.products.append((p, q + quantity))
                 return
         self.products.append((product, quantity))
         self.last_modified = datetime.now()
