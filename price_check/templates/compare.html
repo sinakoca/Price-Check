@@ -16,8 +16,8 @@
         {% for p, q, prices in products_with_prices %}
             <tr>
                 <td>{{ p.name }} ({{ q }})</td>
-                {% for price in prices %}
-                <td align="right" style="background-color: chartreuse">{{ price }}</td>
+                {% for price, is_minimal in prices %}
+                <td align="right" {% if is_minimal %} style="background-color: chartreuse" {% endif %}>{{ price }}</td>
                 {% endfor %}
             </tr>
         {% endfor %}
@@ -25,8 +25,8 @@
     <tfoot>
         <tr>
         <td align="right"><b>Total:</b></td>
-        {% for total in totals %}
-            <td align="right"><b>{{ total }}&euro;</b></td>
+        {% for total, is_minimal in totals %}
+            <td align="right" {% if is_minimal %} style="background-color: chartreuse" {% endif %}><b>{{ total }}&euro;</b></td>
         {% endfor %}
         </tr>
     </tfoot>
