@@ -1,5 +1,6 @@
 <h2>Wish List</h2>
 <div class="sidebar-container">
+    {% if wish_list.products %}
     <ul id="forum_list">
         {% for p, q in wish_list.products %}
         <li>
@@ -20,4 +21,7 @@
         {% endfor %}
     </ul>
     <big><u><a href="/compare">Compare Prices</a></u></big>
+    {% else %}
+    <p>Your wish list is empty.</p>
+    {% endif %}
 </div>

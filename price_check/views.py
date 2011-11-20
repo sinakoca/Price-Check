@@ -12,16 +12,22 @@ from stuff.geolocation import get_city
 
 import settings
 
+#regsitration
+from django import forms
+from django.contrib import auth
+from django.contrib.auth.forms import UserCreationForm
+from django.views.decorators.csrf import csrf_exempt
+
 connection = pymongo.Connection(settings.MONGO_SERVER, settings.MONGO_PORT)
 products = connection.db.products
 retailers = connection.db.retailers
 
-def index(request):
+def index(request, login_error=False):
     _check_session_wish_list(request.session)
     wish_list = _get_wish_list(request.session)
     _check_session_city(request)
     city = _get_city(request.session)
-    return render_to_response('index.html', {'city' : city, 'wish_list' : wish_list})
+    return render_to_response('index.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list, 'login_error' : login_error})
     
 def search(request):
     query = request.GET.get('q') or ''
@@ -35,7 +41,7 @@ def search(request):
     for p in relevant_productcs:
         product = Product(p)
         product_list.append(product)
-    return render_to_response('search.html', {'query' : query, 'products' : product_list, 'city' : city,
+    return render_to_response('search.html', {'user': request.user, 'query' : query, 'products' : product_list, 'city' : city,
         'wish_list' : wish_list})
     
 def add(request):
@@ -55,7 +61,7 @@ def add(request):
             product = Product(product_object)
             wish_list.add_product(product, quantity)
     request.session['wish_list'] = wish_list
-    return render_to_response('index.html', {'city' : city, 'wish_list' : wish_list})
+    return render_to_response('index.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list})
 
 def wish_list(request):
     product_id = request.GET.get('product_id')
@@ -64,7 +70,7 @@ def wish_list(request):
     _check_session_city(request)
     city = _get_city(request.session)
     
-    return render_to_response('list.html', {'city' : city, 'wish_list' : wish_list})
+    return render_to_response('list.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list})
     
 # def remove(request):
 #     product_id = request.GET.get('product_id')
@@ -90,7 +96,7 @@ def update(request):
     
     wish_list.update_product(product_id, quantity)
     request.session['wish_list'] = wish_list
-    return render_to_response('index.html', {'city' : city, 'wish_list' : wish_list})
+    return render_to_response('index.html', {'user': request.user, 'city' : city, 'wish_list' : wish_list})
 
 def compare(request):
     _check_session_wish_list(request.session)
@@ -116,8 +122,41 @@ def compare(request):
                 totals[i] += price * q
             prices.append(price)
         products_with_prices.append((p, q, prices))
-    return render_to_response('compare.html', {'products_with_prices' : products_with_prices,
+    return render_to_response('compare.html', {'user': request.user, 'products_with_prices' : products_with_prices,
             'retailer_names' : retailer_names, 'totals' : totals})
+
+@csrf_exempt
+def register(request):
+    form = UserCreationForm()
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            new_user = form.save()
+            return render_to_response("register_completed.html")
+        # else:
+        #     form = UserCreationForm()
+    return render_to_response("register.html", {'form': form,})
+
+@csrf_exempt
+def login(request):
+    email = request.POST.get('email', '')
+    password = request.POST.get('password', '')
+    user = auth.authenticate(username=email, password=password)
+    if user is not None and user.is_active:
+        # Correct password, and the user is marked "active"
+        auth.login(request, user)
+        # Redirect to a success page.
+        print user.is_authenticated()
+        return HttpResponseRedirect("/")
+    else:
+        # Show an error page
+        return index(request, True)
+
+@csrf_exempt
+def logout(request):
+    auth.logout(request)
+    # Redirect to a success page.
+    return HttpResponseRedirect("/")
 
 def _check_session_wish_list(session):
     if 'wish_list' not in session:

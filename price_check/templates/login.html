@@ -1,0 +1,16 @@
+<h2>User</h2>
+{% if user.is_authenticated %}
+  <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+  <p><a href="/logout">Log Out</p>
+{% else %}
+  <form action="/login" method=post>
+      {% if login_error %}
+          <p>Bad e-mail or password</p>
+      {% endif %}
+      E-mail: <input type="input" name="email" />
+      <br />
+      Password: <input type="password" name="password" />
+      <input type="submit" value="Log In"/>
+  </form>
+  <p><a href="/register">New user</a></p>
+{% endif %}
