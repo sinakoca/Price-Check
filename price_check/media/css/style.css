@@ -18,7 +18,7 @@ ul {list-style:none;}
 #search {background:url(/images/searchbar.jpg) left top no-repeat; height:50px;}
 .hide {display:none!important;}
 #content {position:relative;}
-#sidebarhead {background:url(/images/sidebarhead.jpg) right top no-repeat; height:50px; margin-bottom:10px;}
+#sidebarhead {background:url(/images/max1.gif) right top no-repeat; height:50px; margin-bottom:10px;}
 /*#leftsidebar {width:226px; background:url(/images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}*/
 #leftsidebar {width:215px; background:url(/images/homeleftcol-bg.jpg) right top repeat-y; padding-top:10px; float:left;}
 #leftsidebar h2 {display:block; background:url(/images/leftsidebarh2.jpg) right top no-repeat; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  padding:7px 0 0 15px; margin-bottom:10px;}
