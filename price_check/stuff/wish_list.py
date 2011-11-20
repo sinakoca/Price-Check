@@ -23,10 +23,12 @@ class WishList(object):
 
 
     def update_product(self, product_id, quantity):
+        i = 0
         for p, q in self.products:
             if p.id == product_id:
-                self.products.remove((p, q))
-                if q > 0:
+                self.products.pop(i)
+                if quantity > 0:
                     self.products.append((p, quantity))
                 break
+            i += 1
         self._sort_products()
