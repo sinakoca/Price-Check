@@ -20,12 +20,8 @@ RETAILERS = [
         'id' : 'maxima_tallinn',
         'name' : 'Maxima',
         'city' : 'Tallinn'
-    },
-    {
-        'id' : 'prisma_tartu',
-        'name' : 'Prisma',
-        'city' : 'Tartu'
     }
+   
 ]
 
 PRODUCTS = [
