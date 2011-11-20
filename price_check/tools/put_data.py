@@ -13,7 +13,7 @@ RETAILERS = [
     },
     {
         'id' : 'consum_tartu',
-        'name' : 'Consum',
+        'name' : 'Konsum',
         'city' : 'Tartu'
     },
     {
@@ -30,7 +30,7 @@ RETAILERS = [
 
 PRODUCTS = [
     {
-        'name' : 'Tere Piim 1L',
+        'name' : 'Tere Milk 1 Lt',
         'keywords' : ['milk', 'piim'],
         'image' : None,
         'retailers' : {
@@ -46,9 +46,9 @@ PRODUCTS = [
         }
     },
     {
-        'name' : 'Sai Leib',
+        'name' : 'White Bread',
         'keywords' : ['bread', 'tortilla', 'white'],
-        'image' : None,
+        'image' : whitebread.jpg,
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.42
@@ -62,9 +62,9 @@ PRODUCTS = [
         }
     },
     {
-        'name' : 'Milk 2.0L',
+        'name' : 'Pinar Milk 2.0 Lt',
         'keywords' : ['milk', 'piim'],
-        'image' : None,
+        'image' : pinar.jpg,
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 1.31
@@ -78,7 +78,7 @@ PRODUCTS = [
         }
     },
     {
-        'name' : 'Mikrolaineahi Gamma, SMB177DIH-P',
+        'name' : 'Philips SCF510 Microwave',
         'keywords' : ['microwave', 'Oven'],
         'image' : '01.jpg',
         'retailers' : {
@@ -94,9 +94,9 @@ PRODUCTS = [
         }
     },
     {
-        'name' : 'Leib',
-        'keywords' : ['bread', 'tortilla'],
-        'image' : None,
+        'name' : 'Persil 3 Kg',
+        'keywords' : ['detergent', 'persil'],
+        'image' : persil.jpeg,
         'retailers' : {
             'maxima_tartu' : {
                 'price' : 0.39
@@ -175,8 +175,8 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'Farm drinking cherry yougart',
-        'keywords' : ['yougurt', 'drinking'],
+        'name' : 'Farm Cherry Yoghurt',
+        'keywords' : ['yoghurt', 'farm'],
         'image' : '13.jpg',
         'retailers' : {
             'maxima_tartu' : {
@@ -192,8 +192,8 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'alma yougart',
-        'keywords' : ['yougart', 'alma'],
+        'name' : 'Alma Yoghurt 360 Gr',
+        'keywords' : ['yoghurt', 'alma'],
         'image' : '06.jpg',
         'retailers' : {
             'maxima_tartu' : {
@@ -209,8 +209,8 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'Segu',
-        'keywords' : ['segu', 'Segu'],
+        'name' : 'Fresco Frozen Vegetable',
+        'keywords' : ['vegetable', 'Segu'],
         'image' : '07.jpg',
         'retailers' : {
             'maxima_tartu' : {
@@ -226,8 +226,8 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'Kostilja',
-        'keywords' : ['kostilja', 'kostilja'],
+        'name' : 'Maggi Chicken Soup',
+        'keywords' : ['soup', 'kostilja'],
         'image' : '08.jpg',
         'retailers' : {
             'maxima_tartu' : {
@@ -260,8 +260,8 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'Coockies',
-        'keywords' : ['coockies', 'coockie'],
+        'name' : 'Acme Cookies(500 gr Pack)',
+        'keywords' : ['cookies', 'cookie'],
         'image' : '10.jpg',
         'retailers' : {
             'maxima_tartu' : {
@@ -277,7 +277,7 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'pampers',
+        'name' : 'Pampers in 12 pack',
         'keywords' : ['pampers', 'Pamper'],
         'image' : '11.jpg',
         'retailers' : {
@@ -294,8 +294,8 @@ PRODUCTS = [
     }
     ,
     {
-        'name' : 'Al Coq',
-        'keywords' : ['alcoq', 'beer'],
+        'name' : 'Ale Coq',
+        'keywords' : ['alecoq', 'beer'],
         'image' : '12.jpg',
         'retailers' : {
             'maxima_tartu' : {
