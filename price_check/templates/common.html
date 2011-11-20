@@ -22,6 +22,9 @@
                     $('#change_city').show();
                     $('#location').hide();
                 });
+                $('#change_city').change(function() {
+                    $('#update_locatin').submit();
+                });
             });	
         </script>
 
@@ -38,6 +41,7 @@
                     </ul>
                 <p style="float: right;font-size: small;" >
                                 Your location: <span id="location">{{ city }} (<a href="#"><u>change</u></a>)</span>
+                                <form id="update_locatin" action="/update_location" typ="GET">
                                 <select id="change_city" onchange="method(this.value)" class="show" name=city>
                                     <option value="{{ city }}" id="{{ city }}" selected="selected">{{ city }}</option>
                                     <option value="Tallinn" id="Tallinn">Tallinn</option>
@@ -52,6 +56,7 @@
                                     <option value="Rakvere" id="Rakvere">Rakvere</option>
                                     <option value="Haapsalu" id="Haapsalu">Haapsalu</option>
                                 </select>
+                                </form>
                             </p>
                 
                     <div class="clear"></div>

@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^register$', 'price_check.views.register'),
     url(r'^login$', 'price_check.views.login'),
     url(r'^logout$', 'price_check.views.logout'),
+    url(r'^update_location$', 'price_check.views.update_location'),
     
     (r'^(?P<path>js/.*)', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),

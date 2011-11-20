@@ -10,6 +10,8 @@ from stuff.product import Product
 from stuff.wish_list import WishList
 from stuff.geolocation import get_city
 
+from django.utils import simplejson as json
+
 import settings
 
 #regsitration
@@ -146,7 +148,6 @@ def login(request):
         # Correct password, and the user is marked "active"
         auth.login(request, user)
         # Redirect to a success page.
-        print user.is_authenticated()
         return HttpResponseRedirect("/")
     else:
         # Show an error page
@@ -156,6 +157,11 @@ def login(request):
 def logout(request):
     auth.logout(request)
     # Redirect to a success page.
+    return HttpResponseRedirect("/")
+
+def update_location(request):
+    city = request.GET.get('city')
+    request.session['city'] = city
     return HttpResponseRedirect("/")
 
 def _check_session_wish_list(session):
