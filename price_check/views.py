@@ -170,6 +170,14 @@ def logout(request):
 def update_location(request):
     city = request.GET.get('city')
     request.session['city'] = city
+    _check_session_wish_list(request.session)
+    wish_list = _get_wish_list(request.session)
+    wish_list.retail_chains = []
+    # get ratail chain names
+    retailer_objects = retailers.find({'city' : city})
+    for r in retailer_objects:
+        wish_list.retail_chains.append(r['name'])    
+    request.session['wish_list'] = wish_list
     return HttpResponseRedirect("/")
 
 def _check_session_wish_list(session):

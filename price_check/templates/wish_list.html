@@ -21,8 +21,21 @@
         </li>
         {% endfor %}
     </ul>
-    <h3><center><big><u><a href="/compare">Compare Prices</a></u></big></center></h3>
+    
     {% else %}
     <p>Your wish list is empty.</p>
     {% endif %}
+    
 </div>
+<h2>Retail chains in your location</h2>
+    {% if wish_list.retail_chains %}
+    <center>
+    {% for chain in wish_list.retail_chains %}
+        {{ chain }}
+        {% if forloop.last %}{% else %} | {% endif %}
+    {% endfor %}
+    </center>
+    {% else %}
+    There is no retail chains available in your location.
+    {% endif %}
+<h3><center><big><u><a href="/compare">Compare Prices</a></u></big></center></h3>
