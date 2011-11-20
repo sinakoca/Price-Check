@@ -29,7 +29,7 @@ ul {list-style:none;}
 #midcolumn .subhead {display:block; background: #E7EFCA; height:23px; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif;  text-align: left; padding:7px 0 0 15px; margin-bottom:10px;}
 #leftsidebar h2, #sidebar h2, .subhead {text-shadow:#fff 1px 1px 1px; color:#736962!important; font-weight:bold;}
 #footer {background:url(/images/footer.jpg) no-repeat; height:195px;}
-.tplinfo {display:block; margin:0;}
+.tplinfo {display:block; text-align: center;}
 #templatelist {display:block; padding-right:3px;}
 #templatelist li {display:block; background:url(/images/templateholder2.gif) no-repeat; width:171px; height:149px; padding:8px 16px 8px 16px; margin:0 auto 8px auto;}
 #templatelist li img {display:block; margin-bottom:5px;}
